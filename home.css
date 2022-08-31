@@ -122,37 +122,36 @@ h2 {
   line-height: 25px;
 }
 
-.wrapper {
-  display: inline-flex;
-}
-
-.wrapper .dynamic-txts {
-  list-style: none;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  height: 48px;
-}
-.dynamic-txts li span {
+.creatorName {
   position: relative;
+  font-size: 5rem;
+  color: #0f1922;
+  -webkit-text-stroke: 0.1rem #0f1922;
+  text-transform: uppercase;
+  margin: 10px 0px;
 }
-
-.dynamic-txts li span:after {
-  content: "";
+.creatorName::before {
+  content: attr(data-text);
   position: absolute;
-  height: 100%;
-  width: 100%;
-  border-left: 2px solid white;
+  top: 0;
   left: 0;
-  animation: typing 1.5s steps(17) infinite;
-  background: #0f1922;
+  width: 0;
+  height: 100%;
+  color: #6919ff;
+  -webkit-text-stroke: 0rem #0f1922;
+  border-right: 2px solid #6919ff;
+  overflow: hidden;
+  animation: animate 6s linear infinite;
 }
 
-@keyframes typing {
+@keyframes animate {
+  0%,
+  10%,
   100% {
-    left: 100%;
-    margin: 0 -35px 0 35px;
+    width: 0%;
+  }
+  70%,
+  90% {
+    width: 100%;
   }
 }
