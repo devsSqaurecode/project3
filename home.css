@@ -106,12 +106,12 @@ header {
   padding: 0 100px;
 }
 
-.aboutSectionContent p,
 h2 {
   color: white;
-}
-.aboutSectionContent h2 {
   background-color: #6919ff;
+}
+p {
+  color: white;
 }
 
 .aboutSectionContent p {
@@ -154,4 +154,23 @@ h2 {
   90% {
     width: 100%;
   }
+}
+
+.workHeadingDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 15vh;
+  gap: 1rem;
+}
+
+.workHeading {
+  color: #6919ff;
+  background: white;
+}
+
+.workHeadingDescription {
+  font-size: 3rem;
+  color: #0f1922;
 }
